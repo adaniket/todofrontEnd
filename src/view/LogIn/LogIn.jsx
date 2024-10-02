@@ -33,7 +33,7 @@ const LogIn = () => {
       return response;
     } catch (error) {
       if (error.response) {
-        toast.error(`${error.response?.message}`);
+        toast.error(`${error.response?.data?.message}`);
       }
       return null;
     }

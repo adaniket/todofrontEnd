@@ -67,6 +67,6 @@
   body {
     @apply text-foreground bg-neutral-600  mx-auto w-full;
     max-width: 450px;
-    height: 100vh;
+    height: 90vh;
   }
 }
