@@ -40,7 +40,7 @@
   .footer-bar-wrapper {
     @apply px-4 py-2 bg-gray-800 rounded-sm sticky;
     width: 100%;
-    top: 100%;
+    top: 90%;
   }
   .footer-bar-wrapper svg {
     fill: var(--icon-color);
