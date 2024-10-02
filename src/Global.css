@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  .theme-changer {
+    --icon-color: #fff;
+  }
+  .main-layout {
+    /* @apply border border-cyan-500; */
+    max-width: 440px;
+    position: relative;
+    min-height: 100vh;
+  }
+
+  /* Header */
+  .header {
+    @apply sticky top-0 w-full bg-slate-400 py-2 rounded-sm px-3;
+  }
+
+  .content-wrapper {
+    width: inherit;
+    height: 90vh;
+    overflow-y: scroll;
+  }
+  .avatar-holder {
+    @apply border-stone-400;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  /* footer */
+  .footer-bar-wrapper {
+    @apply px-4 py-2 bg-gray-800 rounded-sm sticky;
+    width: 100%;
+    top: 100%;
+  }
+  .footer-bar-wrapper svg {
+    fill: var(--icon-color);
+    font-size: 2rem;
+  }
+
+  .content-wrapper::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  .content-wrapper::-webkit-scrollbar-track {
+    background-color: #eaeaea4e;
+    border-radius: 10px;
+  }
+
+  .content-wrapper::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+    border: 3px solid #f1f1f1;
+  }
+
+  .content-wrapper::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+}
