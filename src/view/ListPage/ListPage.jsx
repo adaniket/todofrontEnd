@@ -65,6 +65,7 @@ const ListPage = () => {
   const handleDelete = async (listId) => {
     const payload = {
       listId,
+      userId:data.id
     };
     try {
       const response = await api.post("task/delete-list", payload);
