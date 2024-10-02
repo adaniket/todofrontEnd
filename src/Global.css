@@ -13,7 +13,7 @@
     /* @apply border border-cyan-500; */
     max-width: 440px;
     position: relative;
-    min-height: 100vh;
+    max-height: 90vh;
     overflow: hidden;
   }
 
@@ -24,7 +24,7 @@
 
   .content-wrapper {
     width: inherit;
-    height: 90vh;
+    height: 80vh;
     overflow-y: scroll;
   }
   .avatar-holder {
