@@ -18,7 +18,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import userData from "@/store/user";
 import ApiRoutes from "@/api/apiRoutes";
 const Dashboard = () => {
-  const api = new ApiRoutes("http://localhost:4000/api");
+  const api = new ApiRoutes(import.meta.env.VITE_API_URL);
   const [colorValue, setColorValue] = useState("#aabbcc");
   const [colorValueText, setColorValueText] = useState("#000");
   const [listName, setListName] = useState("");

@@ -58,17 +58,19 @@ const SignUp = () => {
   const onSubmit = async (values) => {
     try {
       const response = await api.post("user", values);
-      if (response.data.status === "success") {
-        if (response.data.token) {
-          localStorage.setItem("logIn", true);
-          toast.success("User created!");
-          navigate("/login");
-        }
+      if (response.status === "success") {
+        localStorage.setItem("logIn", true);
+        toast.success("User created!");
+       setTimeout(()=>{
+        navigate("/login");
+       },1000)
       }
     } catch (error) {
       if (error.response) {
         if (error.response.status === 400) {
-          toast.error(error.response.data.message || "Bad request, please try again.");
+          toast.error(
+            error.response.data.message || "Bad request, please try again."
+          );
         } else {
           toast.error("An unexpected error occurred.");
         }
@@ -78,7 +80,7 @@ const SignUp = () => {
       return null;
     }
   };
-  
+
   return (
     <div className="h-[100vh] flex justify-center items-center flex-col ">
       <Card className="w-9/12 bg-gray-400 ">
@@ -177,7 +179,12 @@ const SignUp = () => {
             </form>
           </Form>
           <div className="my-2">
-             <Link to="/login"><span className="text-red-400 mx-1 ">Already have an account ?</span>LogIn</Link>
+            <Link to="/login">
+              <span className="text-red-400 mx-1 ">
+                Already have an account ?
+              </span>
+              LogIn
+            </Link>
           </div>
         </CardContent>
       </Card>
